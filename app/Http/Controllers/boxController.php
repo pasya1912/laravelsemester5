@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class boxController extends Controller
 {
     public function coba(){
-        return view('ggwp');
+        return view('box');
     }
     /**
      * Display a listing of the resource.
