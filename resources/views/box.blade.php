@@ -1,7 +1,11 @@
 @extends('utama')
 @section('judul_menu')
-<h1>Ini adalah halaman barang</h1>
+    @php
 
+    @endphp
+    @for($i=0;$i<10;$i++)
+        <h1>{{$i}}. Ini adalah halaman barang</h1>
+    @endfor
 @endsection
 
 @section('isi_menu')

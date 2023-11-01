@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class boxController extends Controller
 {
-    public function coba(){
-        return view('box');
+    public function coba()
+    {
+        return "ini coba";
     }
     /**
      * Display a listing of the resource.
@@ -17,7 +18,7 @@ class boxController extends Controller
 
     public function index()
     {
-        return view('box');
+        return view('content');
     }
 
     /**

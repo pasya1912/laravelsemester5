@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\boxController;
-use Illuminate\Support\Facades\Route;   
+use App\Http\Controllers\formController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get("/box", [boxController::class,'index']);
+Route::get("/percobaan", [boxController::class, 'coba']);
+Route::get("/box", [boxController::class, 'index']);
+
+Route::get("/form",[formController::class,'index']);
+Route::post("/form",[formController::class,'action'])->name('form.action');
+
