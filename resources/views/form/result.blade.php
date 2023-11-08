@@ -9,15 +9,15 @@
             @csrf
             <div>
                 <label for="nama">Nama:</label>
-                <input type="text" name="nama" value="{{$nama}}"disabled>
+                <input type="text" name="nama" value="{{$data->nama}}"disabled>
             </div>
             <div>
                 <label for="npm">NPM</label>
-                <input type="text" name="npm" value="{{$npm}}" disabled>
+                <input type="text" name="npm" value="{{$data->npm}}" disabled>
             </div>
             <div>
                 <label for="nama">nilai</label>
-                <input type="number" step="0.1" name="number" value="{{$nilai}}"disabled>
+                <input type="number" step="0.1" name="number" value="{{$data->nilai}}"disabled>
             </div>
             <div>
 

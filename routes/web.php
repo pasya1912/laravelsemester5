@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get("/percobaan", [boxController::class, 'coba']);
 Route::get("/box", [boxController::class, 'index']);
 
-Route::get("/form",[formController::class,'index']);
+Route::get("/form",[formController::class,'index'])->name('form.index');
 Route::post("/form",[formController::class,'action'])->name('form.action');
+Route::get("/form/{id}",[formController::class,'get'])->where('id','[0-9]+')->name('form.get');
 

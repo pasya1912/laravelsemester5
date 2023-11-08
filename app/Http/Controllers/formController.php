@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Form;
 use Illuminate\Http\Request;
 
 class formController extends Controller
@@ -18,7 +20,20 @@ class formController extends Controller
             'npm' => $request->npm,
             'nilai' => $request->nilai
         ];
-        return view('form.result',$data);
+        $id = Form::add($data);
+        if($id){
+            return redirect()->route('form.get', ['id' => $id]);
+        }
+        else{
+            return redirect()->route('form.index');
+        }
+    }
+    public function get($id){
+        $data = Form::find($id);
+        if(!$data){
+            return redirect()->route('form.index');
+        }
+        return view('form.result', ['data' => $data]);
     }
 
 }
